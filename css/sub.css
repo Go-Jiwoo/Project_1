@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; box-sizing: border-box;}
+
+#slider3 
+
+.subpage {width:100%; color:#333;}
+
+.wrap5 {width:1200px; height:1025px;  margin:0 auto; position:relative;}
+
+.category {width:200px; height:70px; float:left; margin: 250px 50px 0 0px;
+                opacity:0;
+                transform:translateX(-30px);
+                transition:all 0.8s;
+                transition-delay:0.5s;
+                }
+
+.empty2 {height:350px;}
+
+.imgboxx1, .imgboxx2 {overflow:hidden;}
+.imgboxx1 img, .imgboxx2 img {width:100%; height:100%;}
+
+.imgboxx1 {width:100px; height:100px;
+    margin:20px 0; cursor:pointer;
+    opacity:0;
+    transform:translateX(-30px);
+    transition:all 0.8s;
+    transition-delay:0.6s;
+}
+
+.imgboxx2 {width:100px; height:100px; 
+    background-color: green; margin:20px 0; cursor:pointer;
+    opacity:0;
+    transform:translateX(-30px);
+    transition:all 0.8s;
+    transition-delay:0.8s;
+}
+
+.name5 {width:300px; height:150px;  float:left; margin:80px 0; font-family:'noto sans'; font-weight:700;
+    opacity:0;
+    transform:translateX(-50px);
+    transition:all 0.8s;
+    transition-delay:1s;}
+
+.atc {width:200px; height:80px; position:absolute; text-align:center; padding-top:28px; border:1px solid #666; top:780px; left:1000px; cursor:pointer; 
+    opacity:0;
+    transform:translateX(30px);
+    transition: opacity 0.8s, transform 0.8s ;
+    transition-delay:1.2s;}
+
+.atc:hover {background-color: #666; color:white; transition-delay:0s; transition:0.3s;}
+
+.buy {width:250px; height:350px; background-color: white; position:absolute; top:400px; left:950px; padding: 20px; border-radius:20px 20px 0 20px; border:0.5px solid #999; display: none;}
+
+.product1 {width:700px; height:650px; background-color: pink;
+    position: absolute; top:250px; left:250px; overflow:hidden;
+    opacity:0;
+    transform:translateX(-30px);
+    transition:all 0.8s;}
+
+.product1 img {width:110%; height: 120%; transform:translate(-6%, -9%);}
+
+.category p {font-size:40pt; font-family:"noto sans"; font-weight:700; color:#333;}
+
+.name5 p {font-family:"noto sans"; font-size:32pt; line-height:40px;}
+.name5 p > span.a {font-size:15pt; font-weight:300;}
+.name5 p > span.b {font-size:32pt; color:pink;}
+
+span.buy1 {font-size:25pt; font-family: "noto sans"; font-weight:600; letter-spacing: -1px; margin:13px;}
+.buy img {width:50px; height:50px; vertical-align: middle; }
+.buy2 {display:inline-block; margin-top:5px; font-family:'noto sans'; font-weight:400; letter-spacing: -1px; font-size:12pt;}
+
+#my_sum {margin-top:20px; margin-left:48px; font-family:"noto sans"; font-weight:600; font-size:15pt; display: inline-block;}
+
+#my_sum:after {content:"원"; font-size:95%; display: inline-block;}
+
+form, select {margin:10px 13px;}
+
+
+select {padding:10px; width:180px; cursor:pointer;}
+
+form [type="button"] { width:27px; height: 27px; border:none; padding:5px; cursor:pointer; border-radius:50%;}
+
+form [type="button"]:active {background-color: #adadad; color:white;}
+
+form [type="text"] {border:none; padding:5px; text-align: center; width:50px;}
+.right {margin-left:65px;}
+
+.jjim {font-size:50pt;  position:absolute; top:780px; left:920px; color:#888; margin-top:-13px; cursor:pointer;
+    opacity:0;
+    transform:translateX(20px);
+    transition:opacity 0.8s, transform 0.8s;
+    transition-delay: 1.6s;}
+.jjim:hover {color:rgb(255, 125, 116)}
+
+.jjim2 {color:rgb(255, 68, 55)}
+
+.damgi {display:inline-block; border:none; padding:8px 12px; cursor:pointer;}
+
+.wrap6 {width:1200px; height:900px; margin:0 auto; position:relative;}
+
+.stroke2 {width:1200px; height:1px; background-color:#b6b6b6}
+
+
+.list {width:200px; display:inline-block; vertical-align: top;}
+.list li {border-bottom:1px solid #b3b3b3; padding:20px 0 10px 10px; cursor:pointer; }
+
+.details, .information {width:800px; height:900px; background-color: white; padding:20px 20px 20px 70px; line-height: 25px; letter-spacing: -1px; font-family: "noto sans kr"; font-weight:300; position:absolute; margin: -150px 200px; }
+
+.details span, .information span {font-size:15pt; font-weight:700; margin-left:5px;}
+
+.review{width:800px; height:900px;; padding:20px; line-height: 25px; letter-spacing: -1px; font-family: "noto sans kr"; font-weight:300; position:absolute; margin: -150px 200px; display:none; }
+
+.score {width:750px; height:150px; margin:0 auto; padding:20px; text-align: center; display:flex; justify-content: space-around;}
+
+.score2{width:120px; height:100%; padding-top:30px; font-size:15pt; padding-left:25px;}
+
+.score div:nth-of-type(3) {width:150px; height:100%; padding-top:28px; border:1px solid black;}
+
+.score table {font-size:10pt; width:100%; margin-left:-10px;}
+.score table tr {height:10px;}
+.score table td:nth-of-type(odd) {width:80px;}
+.score table td:nth-of-type(2n) {width:220px;}
+
+
+.groupp { display:flex; flex-flow:row wrap; justify-content: space-around; margin:30px 0;}
+
+.groupp p {padding:15px 30px; margin-top:20px; border:1px solid #666; transition:0.3s;}
+.groupp p:hover {background-color: #929292; color:white; cursor:pointer;}
+
+.comment {width: 46%; height:150px; margin:15px 0; border-radius:10px; border:1px solid #666; overflow:hidden;}
+
+.comment .img {width:120px; height:120px; background-color: rgb(202, 202, 202); margin:13px 0 0 210px; overflow:hidden;}
+
+.comment .img img {width:100%;}
+
+.information {width:800px; height:900px; padding:20px 20px 20px 70px;  line-height: 25px; letter-spacing: -1px; font-family: "noto sans kr"; font-weight:300; position:absolute; display:none; margin: -150px 200px; }
+
+.wrap7 {width:800px; height:220px; margin: 0 auto; overflow:hidden; position:relative; margin-bottom: 100px; display:flex; flex-flow:column; justify-content: space-between;}
+
+.graph {width:220px; height:7px; background-color: rgb(190, 190, 190); border-radius: 20px;}
+.graph .graph1 {width:75%; height:7px; background-color: rgb(255, 89, 89); border-radius: 20px;} 
+.graph .graph2 {width:20%; height:7px; background-color: rgb(107, 107, 107); border-radius: 20px;} 
+.graph .graph3 {width:5%; height:7px; background-color: rgb(107, 107, 107); border-radius: 20px;} 
+.graph .graph4 {width:0%; height:7px; background-color: rgb(107, 107, 107); border-radius: 20px;} 
+
+.comment p {border:none; float:left; font-size:10pt; width:210px; height:135px; overflow:hidden;line-height: 20px; margin-top: 0px; }
+.comment p:hover {background-color: white; color:#333; cursor:auto;}
+
+
+
+.wrap7 div {width:100%; height:150px; display:flex; justify-content: space-between;}
+.wrap7 div {overflow:hidden;}
+.wrap7 div img {height:100%; transition: 0.3s;}
+.wrap7 div img:hover {transform: scale(1.2); cursor:pointer;}
+
+.wrap7 span {font-weight:700; font-size:18pt; letter-spacing: -1px;}
+.wrap7 .stroke3 {width:800px; height:1px; background-color: #7a7a7a;}
+
+.information img {width:350px; height:350px;}
+
+
+
+
+

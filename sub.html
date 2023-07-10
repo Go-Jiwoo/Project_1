@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theOVTK</title>
+    
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/sub.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function() {
+            $('.product1').css('transform','translateX(0px)').css('opacity','1');
+            $('.category').css('transform','translateX(0px)').css('opacity','1');
+            $('.name5').css('transform','translateX(0px)').css('opacity','1');
+            $('.imgboxx1').css('transform','translateX(0px)').css('opacity','1');
+            $('.imgboxx2').css('transform','translateX(0px)').css('opacity','1');
+            $('.atc').css('transform','translateX(0px)').css('opacity','1');
+            $('.jjim').css('transform','translateX(0px)').css('opacity','1');
+
+
+            $('.atc').click(function() {
+                $('.buy').fadeToggle();
+            });
+
+            $('.jjim').click(function() {
+                $(this).toggleClass('jjim2');
+            });
+
+            $('.imgboxx1').click(function() {
+            $('.product1 img').attr('src','img/jpg/case/peachcase1.jpg');
+           
+            });
+
+            $('.imgboxx2').click(function() {
+            $('.product1 img').attr('src','img/jpg/case/peachcase2.jpg');
+            });
+
+            $('.list li:nth-of-type(1)').click(function(){
+                $('.details').fadeIn();
+                $('.review').fadeOut();
+                $('.information').fadeOut();
+                $('.list li').css('font-weight','400');
+                $(this).css('font-weight','700');
+            });
+
+            $('.list li:nth-of-type(2)').click(function(){
+                $('.details').fadeOut('');
+                $('.review').fadeIn();
+                $('.information').fadeOut();
+                $('.list li').css('font-weight','400');
+                $(this).css('font-weight','700');
+            });
+
+            $('.list li:nth-of-type(3)').click(function(){
+                $('.details').fadeOut('');
+                $('.review').fadeOut('');
+                $('.information').fadeIn();
+                $('.list li').css('font-weight','400');
+                $(this).css('font-weight','700');
+            });
+
+            });
+
+    </script>
+
+</head>
+<body onload="init();">
+    <header>
+        <span id="logo"><a href="index.html">TheOVTK</a></span>
+        <nav class="nav1">
+            <ul>
+                <li><a href="sub.html">ALL</a></li>
+                <li><a href="index.html#bestitem">BEST</a></li>
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="sub3.html">NOTICE</a></li>
+                <li><a href="sub2.html">CS</a></li>
+            </ul>
+
+        </nav>
+
+        <nav class="nav2">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html">Cart</a></li>
+                <li><a href="login.html">MyPage</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- dlimiter line -->
+
+<div id="slider3">
+    <div class="subpage">
+        <div class="wrap5">
+            <div class="category"><p>CASE</p></div>
+            <div class="empty2"></div>
+            <div class="imgboxx1"><img src="img/jpg/case/peachcase1.jpg" alt="peachcase1"></div>
+            <div class="imgboxx2"><img src="img/jpg/case/peachcase2.jpg" alt="peachcase2"></div>
+            <div class="product1"><img src="img/jpg/case/peachcase1.jpg" alt="peachcase1"></div>           
+            <div class="name5"><p>●<span class="b">●</span> <br> <br>
+                Cord Peach <br> <span class="a">￦ 18,000</span></p></div>
+            <div class="buy">
+                <span class="buy1">Total</span> <br>
+                
+                <br>
+                <img src="img/jpg/case/peachcase1.jpg" alt="peachcase"> <span class="buy2">Cord Peach</span><br>
+                <select>
+                    <option value="iphone">7/8/SE2</option>
+                    <option value="iphone">7+/8+</option>
+                    <option value="iphone">X</option>
+                    <option value="iphone">XR</option>
+                    <option value="iphone">XS</option>
+                    <option value="iphone">XS MAX</option>
+                    <option value="iphone">11</option>
+                    <option value="iphone">11 PRO</option>
+                    <option value="iphone">11 PRO MAX</option>
+                    <option value="iphone">12 MINI</option>
+                    <option value="iphone">12/12 PRO</option>
+                    <option value="iphone">12 PRO MAX</option>
+                    <option value="iphone">13 MINI</option>
+                    <option value="iphone">13</option>
+                    <option value="iphone">13 PRO</option>
+                    <option value="iphone">13 PRO MAX</option>
+                    <option value="iphone">14</option>
+                    <option value="iphone">14 PRO</option>
+                    <option value="iphone">14 PLUS</option>
+                    <option value="iphone">14 PRO MAX</option>
+                </select>
+                
+
+
+                <script>
+                    <!--
+                    var sell_price;
+                    var amount;
+                    
+                    function init () {
+                        sell_price = document.form.sell_price.value;
+                        amount = document.form.amount.value;
+                        document.form.sum.value = sell_price;
+                        change();
+                    }
+                    
+                    function add () {
+                        hm = document.form.amount;
+                        hm.value ++ ;
+                    
+                        var sum_ = parseInt(hm.value) * sell_price;
+                    document.getElementById("my_sum").innerHTML=sum_;
+                    }
+                    
+                    function del () {
+                        hm = document.form.amount;
+                            if (hm.value > 1) {
+                                hm.value -- ;
+                                var sum_ = parseInt(hm.value) * sell_price;
+                    document.getElementById("my_sum").innerHTML=sum_;
+                            }
+                    }
+                    
+                    function change () {
+                        hm = document.form.amount;
+                    
+                            if (hm.value < 0) {
+                                hm.value = 0;
+                            }
+                        var sum_ = parseInt(hm.value) * sell_price;
+                    document.getElementById("my_sum").innerHTML=sum_;
+                    } 
+                    //-->
+                </script>
+
+
+                    
+                    <form name="form" method="get">
+                        <div class="right">
+                    <input type="button" value=" - " onclick="del();">
+                    <input type=hidden name="sell_price" value="18000">
+                    <input type="text" name="amount" value="1" size="3" onchange="change();"> 
+                    <input type="button" value=" + " onclick="add();">
+                    <input type="hidden" name="sum"></div>
+                    <br>
+                    ___________________________
+                    <button class="damgi">담기</button>
+                    <div id="my_sum"></div>
+                    </form>
+                
+
+            </div>
+            <div class="jjim">♥</div>
+            <!-- <div class="jjim2">♥</div> -->
+            <div class="atc">ADD TO CART</div>
+        </div>
+
+
+        <div class="wrap6">
+            <div class="stroke2"></div>
+            <ul class="list">
+                <li style="font-weight:700">Information</li>
+                <li>Review</li>
+                <li>Details</li>
+            </ul>
+            <div class="details">
+                <p>
+                <span>Notice</span> <br><br>
+                - 택배사의 경우 한진택배를 이용하고 있습니다. <br>
+                - 주문 누락, 불량 건 등의 경우 사진과 함께 게시판에 남겨주시면 빠른 응대를 하고 있습니다. <br>
+                - 케이스는 1:1 제작으로 진행됨으로써 교환 및 환불이 불가하니, 신중한 구매 부탁드립니다. <br>
+                - 기종 옵션을 잘못 선택한 경우, 이 또한 교환 및 환불이 불가합니다. <br>
+                - 문구 제품의 경우 칼선 밀림 현상이 생길 수 있습니다.  <br>
+                - 사출 제작 공정에서 발생하는 주입 구멍이 불규칙하게 있을 수 있습니다. <br>
+                - 아래 도안 이미지와 실제 상품의 색감차이는 있을 수 있습니다.  <br>
+                - 제조 과정에서 생기는 스크래치, 재단 오차, 작은 점은 불량이 아닙니다. <br>
+                - 전화 응대는 진행하지 않고 있습니다.
+                <br><br><br>
+                <span>Exchanges and Refunds</span> <br><br>
+                -교환 및 환불 문의는 CS 게시판을 통해 사진과 함께 접수 부탁드립니다.  <br>
+                - 상품의 불량, 배송 중 파손에 의한 교환 및 환불은 상품 수령 후 24시간 이내로 접수 부탁드립니다.  <br>
+                - 문의 없이 임의적으로 반송 시에는 자동 재반송이 될 수 있습니다. <br>
+                - 1:1 제작품은 단순 변심으로 인한 교환 환불이 불가합니다.
+                <br><br><br>
+                <span>No Exchange or Refund</span> <br><br>
+                - 상품 수령 후 7일 이상 경과된 경우 <br>
+                - 고객의 부주의로 인한 상품 가치가 훼손된 경우 (포장훼손, 사용흔적 등) <br>
+                - 1:1 주문 제작 상품의 경우
+                <br><br><br>
+                <span>FAQ Service</span> <br><br>
+                옵티크는 FAQ 서비스를 통하여 문의하기 전에 빠르게 질문에 대한 답변을 드리고 있습니다. <br>
+                자주 받는 질문 리스트를 확인하여, 답변 받으세요.
+            </p>
+            </div>
+
+            <div class="review">
+                <div class="score">
+                    <div class="score2">평점 4.8<br>★★★★★</div>
+                    <div>
+                        <table>
+                            <tr><td>5점</td>
+                                <td>
+                                    <div class="graph">
+                                        <div class="graph1">
+                                        </div></div>
+                                </td>
+                            </tr>
+                            <tr><td>4점</td>
+                                <td>
+                                    <div class="graph">
+                                        <div class="graph2">
+                                        </div></div>
+                                </td>
+                            </tr>
+                            <tr><td>3점</td>
+                                <td>
+                                    <div class="graph">
+                                        <div class="graph3">
+                                        </div></div>
+                                </td>
+                            </tr>
+                            <tr><td>2점</td>
+                                <td>
+                                    <div class="graph">
+                                        <div class="graph4">
+                                        </div></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>PHOTO<br>ALBUM</div>
+                </div>
+                
+                <div class="groupp">
+                <div class="comment">
+                    <p>★★★★★<br>
+                        kee1**** <br>
+                        2022-12-13 23:01 <br>
+                        예뻐서 주변사람들이 정보도 엄청 물어봐용</p>
+                    <div class="img"><img src="img/jpg/review/1.jpg" alt="1"></div></div>
+                <div class="comment">
+                    <p>★★★★★<br>
+                        rla0**** <br>
+                        2022-06-12 00:43 <br>
+                        배송은 느렸지만 너무 예뻐요ㅠㅠ 여름이랑 잘 어울려서 사진찍을맛 나요!</p><div class="img"><img src="img/jpg/review/2.jpeg" alt="1"></div></div>
+                <div class="comment">
+                    <p>★★★★★<br>
+                        hn01**** <br>
+                        2022-05-06 11:29 <br>
+                        진짜 여기저기 자랑하고 다니는 나의 뽀짝 케이스,,,다들 사세요&hellip;아니 사지마세요&hellip;</p><div class="img"><img src="img/jpg/review/3.jpeg" alt="1"></div></div>
+                <div class="comment">
+                    <p>★★★★☆<br>
+                        dmst**** <br>
+                        2022-12-13 23:01 <br>
+                        예쁘고 탄탄하고 다 좋은데 배송이 느린건 공지 확인 후 주문한거라 어느정도 이해 했는데 정확한 기간도 안나와있고 하염없이 기다리는거라 좀 힘들었습니다ㅜ</p><div class="img"><img src="img/jpg/review/4.jpeg" alt="1"></div></div>
+                <div class="comment">
+                    <p>★★★★★<br>
+                        kkom**** <br>
+                        2022-03-22 12:27 <br>
+                        배송 대박느렸지만 예쁨</p><div class="img"><img src="img/jpg/review/5.jpeg" alt="1"></div></div>
+                <div class="comment">
+                    <p>★★★★★<br>
+                        tsb0**** <br>
+                        2022-03-15 16:57 <br>
+                        조금 오래 기다리긴 했지만 케이스가 너무 이뻐서 잊었어요</p><div class="img"><img src="img/jpg/review/6.jpg" alt="1"></div></div>
+                <p>SHOW MORE</p>
+                </div>
+            </div>
+
+            <div class="information">
+                <p><span>Case product</span><br><br>
+                    - 배송 방법 : 택배 <br>
+                    - 배송비 : ￦2,600 (￦40,000 이상 무료) <br>
+                    - 도서산간 : 배송비 ￦3,000 추가 부과 <br><br>
+                    - 색상 : 투명 <br>
+                    - 소재 : 폴리카보네이트(PC) + 열가소성 폴리 우레탄(TPU) <br>
+                    - 크기 : 기종에 따라 상이<br>
+                    - 기종 : 규격 외 기종 문의 <br><br>
+                    - 본 상품은 주문 제작 상품으로 최대 7일의 제작 기간이 소요됩니다. <br>
+                    - 제작 이후 단순 변심으로 인한 교환 및 환불이 불가합니다. <br>
+                    - 사출 제작 공정에서 발생하는 주입 구멍이 불규칙하게 있을 수 있습니다. <br>
+                    - UV 인쇄 특성 상 미세한 인쇄선이 보일 수 있습니다. <br>
+                    - 케이스 내부의 필름을 제거 후 사용해주세요. <br>
+                    - 처음 받아보실 때 눈에 보이는 스크래치는 필름 제거 시에 사라집니다.<br></p>
+                    <br>
+                    <br>
+
+                    <img src="img/jpg/case/peachcase1.jpg" alt="peachcase1">
+                    <img src="img/jpg/case/peachcase2.jpg" alt="peachcase2">
+            </div>
+        </div>
+        
+        <div class="wrap7">
+            <div class="stroke3"></div>
+            <span>Recommend</span>
+            <div>
+                <div><img src="img/rec/cup1.jpg" alt="cup1"></div>
+                <div><img src="img/rec/fukcase1.png" alt="fukcase1"></div>
+                <div><img src="img/rec/keyring1.jpg" alt="keyring1"></div>
+                <div><img src="img/rec/lifestylekit2.jpg" alt="lifestylekit2"></div>
+                <div><img src="img/rec/peoplecase1.jpg" alt="peoplecase1"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!-- dlimiter line -->
+
+
+    <footer>
+        <table class="table2">
+            <tr>
+                <td class="td1"><span>상호명</span>&nbsp;&nbsp;&nbsp;옵티크 OVTK</td>
+                <td class="td2"><span>고객센터</span>&nbsp;&nbsp;&nbsp;010-4459-8565</td>
+                <td class="td3"><a href="https://instagram.com/theovtk">
+                    https://instagram.com/theovtk</a></td>
+            </tr>
+            <tr>
+                <td class="td1"><span>사업자등록번호</span>&nbsp;&nbsp;&nbsp;6880501518</td>
+                <td class="td2"><span>통신판매업번호</span>&nbsp;&nbsp;&nbsp;2020-경남진주-0844</td>
+                <td class="td3"><a href="http://blog.naver.com/over-take">
+                    http://blog.naver.com/over-take</a></td>
+            </tr>
+            <tr>
+                <td class="td1"><span>대표자</span>&nbsp;&nbsp;&nbsp;정예준</td>
+                <td class="td2"><span>이메일</span>&nbsp;&nbsp;&nbsp;over-take@naver.com</td>
+                <td class="td3"><a href="https://smartstore.naver.com/over-take">
+                    https://smartstore.naver.com/over-take</a></td>
+            </tr>
+            <tr>
+                <td class="td2" colspan="2"><span>사업장 소재지</span>&nbsp;&nbsp;&nbsp;경상남도 진주시 개양로 100 (SKY 시티프라디움) 107동 402호 (우 : 52826)</td>
+                <td class="td3">© Copyright 2020 By ovtk. All Right Reserved.</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>
